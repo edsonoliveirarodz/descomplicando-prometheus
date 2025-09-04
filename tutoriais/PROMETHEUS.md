@@ -1,6 +1,6 @@
 # 🚀 Prometheus no Linux (systemd) — Guia passo a passo
 
-Um guia prático para **baixar, instalar, configurar e executar o Prometheus como serviço** no Linux usando **systemd** — com boas práticas, validações e dicas de segurança.
+Um guia prático para **baixar, instalar, configurar e executar o Prometheus como serviço** no Linux usando **systemd**.
 
 > ✅ **Pré‑requisitos**
 > - 🔑 Acesso **sudo**
@@ -29,8 +29,8 @@ cd prometheus-3.5.0.linux-amd64.tar.gz
 
 ```bash
 # Usuário e grupo de sistema sem shell de login
-sudo groupadd --system prometheus || true
-sudo useradd --system --no-create-home --shell /usr/sbin/nologin --gid prometheus prometheus 2>/dev/null || true
+sudo groupadd -r prometheus 2>/dev/null || true
+sudo useradd  -r -g prometheus --no-create-home --shell /sbin/nologin prometheus
 
 # Diretórios para config, dados e logs
 sudo mkdir -p /etc/prometheus /var/lib/prometheus /var/log/prometheus

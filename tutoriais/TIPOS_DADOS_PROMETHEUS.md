@@ -1,6 +1,6 @@
 # 📊 Tipos de Métricas no Prometheus — Guia rápido com exemplos
 
-Este guia resume os **quatro tipos de métricas do Prometheus** com definições claras, exemplos práticos e consultas PromQL úteis. Ideal para colar no repositório ou wiki do time.  
+Este guia resume os **quatro tipos de métricas do Prometheus** com definições claras, exemplos práticos e consultas PromQL úteis. Ideal para colar no repositório ou wiki do time.
 
 > 🧭 **Visão geral**
 > - **Gauge (Medidor):** valor que pode **subir ou descer** ao longo do tempo (ex.: uso de memória, temperatura, tamanho de fila).
